@@ -329,8 +329,8 @@ if (${enable_core_remote_module_support})
   endif()
 endif()
 
-add_subdirectory(modules)
+#add_subdirectory(modules)
 
-add_subdirectory(bindings)
+#add_subdirectory(bindings)
 
-add_subdirectory(samples)
+#add_subdirectory(samples)

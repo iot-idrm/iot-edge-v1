@@ -24,6 +24,7 @@ findAndInstall(azure_c_shared_utility 1.0.25
     -Duse_default_uuid=${use_xplat_uuid}
     -Duse_condition=${enable_event_system}
     -Dskip_samples=ON
+    -Duse_openssl=OFF -Duse_http=OFF
     ${PASSVARS}
     -G "${CMAKE_GENERATOR}")
 set(SHARED_UTIL_INC_FOLDER ${AZURE_C_SHARED_UTILITY_INCLUDE_DIR} CACHE INTERNAL "this is what needs to be included if using sharedLib lib" FORCE)

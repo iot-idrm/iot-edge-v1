@@ -76,7 +76,7 @@ option(run_as_a_service "Flags that we have the goal of running gateway as a ser
 option(enable_dotnet_binding "set enable_dotnet_binding to ON to build dotnet binding host binaries (default is OFF)" OFF)
 option(enable_dotnet_core_binding "set enable_dotnet_core_binding to ON to build dotnet core binding host binaries (default is OFF)" OFF)
 option(enable_ble_module "set enable_ble_module to OFF to remove ble module from gateway build (default is ON)" ON)
-option(enable_native_remote_modules "Build the infrastructure required to support native remote modules (default is ON)" ON)
+option(enable_native_remote_modules "Build the infrastructure required to support native remote modules (default is ON)" OFF)
 option(enable_java_remote_modules "Build the infrastructure required to support java remote modules (default is OFF)" OFF)
 option(enable_nodejs_remote_modules "Build the infrastructure required to support Node.js apps as remote modules (default is OFF)" OFF)
 option(use_amqp "set use_amqp to ON if amqp is to be used, set to OFF to not use amqp" ON)
@@ -131,6 +131,10 @@ if (NOT DEFINED ARCHITECTURE OR ARCHITECTURE STREQUAL "")
     set(ARCHITECTURE "GENERIC")
 endif()
 message(STATUS "AIG architecture: ${ARCHITECTURE}")
+
+set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-stringop-overflow")
+set (CMAKE_CXX_FLAGS "-Wno-stringop-overflow ${CMAKE_CXX_FLAGS}")
+
 
 #setting #defines
 if(WIN32)
@@ -212,7 +216,7 @@ enable_testing()
 compileAsC99()
 
 #this adds all test dependencies
-include(dependencies-test.cmake)
+#include(dependencies-test.cmake)
 
 #this adds all dependencies
 include(dependencies.cmake)

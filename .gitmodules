@@ -10,9 +10,6 @@
 [submodule "deps/uamqp"]
 	path = v1/deps/uamqp
 	url = https://github.com/azure/azure-uamqp-c
-[submodule "deps/umock-c"]
-	path = v1/deps/umock-c
-	url = https://github.com/azure/umock-c
 [submodule "deps/ctest"]
 	path = v1/deps/ctest
 	url = https://github.com/azure/azure-ctest

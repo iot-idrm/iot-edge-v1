@@ -19,6 +19,3 @@
 [submodule "deps/umqtt"]
 	path = v1/deps/umqtt
 	url = https://github.com/azure/azure-umqtt-c
-[submodule "deps/iot-sdk-c"]
-	path = v1/deps/iot-sdk-c
-	url = https://github.com/Azure/azure-iot-sdk-c.git

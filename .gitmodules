@@ -7,9 +7,6 @@
 [submodule "deps/nanomsg"]
 	path = v1/deps/nanomsg
 	url = https://github.com/nanomsg/nanomsg.git
-[submodule "deps/uamqp"]
-	path = v1/deps/uamqp
-	url = https://github.com/azure/azure-uamqp-c
 [submodule "deps/ctest"]
 	path = v1/deps/ctest
 	url = https://github.com/azure/azure-ctest

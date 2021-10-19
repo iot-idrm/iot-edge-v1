@@ -13,6 +13,3 @@
 [submodule "deps/testrunner"]
 	path = v1/deps/testrunner
 	url = https://github.com/azure/azure-c-testrunnerswitcher
-[submodule "deps/umqtt"]
-	path = v1/deps/umqtt
-	url = https://github.com/azure/azure-umqtt-c
